@@ -1,6 +1,6 @@
 import requests
 
-headers = {'Authorization': 'Token 099cd66b13f62cb698873b7c7442c4ab821a2823'}
+headers = {'Authorization': 'Token ae43728eab9e68cbf9b156f888cfaee7f89d4925'}
 
 url_base_cursos = 'http://localhost:8000/api/v2/cursos/'
 url_base_avaliacoes = 'http://localhost:8000/api/v2/avaliacoes/'
@@ -13,8 +13,8 @@ print(resultado.json())
 assert resultado.status_code == 200
 
 # Testando a quantidade de registros
-assert resultado.json()['count'] == 2
+assert resultado.json()['count'] == 7
 
-# Testando se o título do primeiro curso está correto
-assert resultado.json()['results'][0]['titulo'] == 'Criação de APIs REST com Django REST Framework'
+# # Testando se o título do primeiro curso está correto
+assert resultado.json()['results'][1]['titulo'] == 'Asp.Net Core com React.js'
 
